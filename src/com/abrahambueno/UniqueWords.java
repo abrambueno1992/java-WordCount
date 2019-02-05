@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class UniqueWords {
     private String longString;
-    private ArrayList strArr;
-
+    ArrayList<String> strArr = new ArrayList<String>();
+//    ArrayList<Dogs> dogsArrayList
     public static void main(String[] args) {
 
     }
@@ -19,12 +19,12 @@ public class UniqueWords {
             } else {
                 if (temporary != "") {
                     System.out.println("adding: " + temporary);
-//                    strArr.add(temporary);
+                    strArr.add(temporary);
                 }
                 temporary = "";
             }
         }
-        System.out.println("This is the new array, with words only: " + temporary);
+        System.out.println("This is the new array, with words only: " + strArr);
     }
 
     public UniqueWords(String longString) {
