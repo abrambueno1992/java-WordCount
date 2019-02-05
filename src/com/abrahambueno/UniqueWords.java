@@ -19,7 +19,7 @@ public class UniqueWords {
             } else {
                 if (temporary != "") {
                     System.out.println("adding: " + temporary);
-                    strArr.add(temporary);
+                    strArr.add(temporary.toLowerCase());
                 }
                 temporary = "";
             }
