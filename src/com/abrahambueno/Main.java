@@ -1,6 +1,7 @@
 package com.abrahambueno;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Main {
@@ -10,13 +11,19 @@ public class Main {
         // array list unlimited size
         // array list fixed datatype
         ArrayList<UniqueWords> wordsArrayList = new ArrayList<UniqueWords>();
-        UniqueWords arrayOfWords = new UniqueWords(strHR);
+
         HashMap<Integer, UniqueWords> wordsHashMap = new HashMap<Integer, UniqueWords>();
-        ArrayList<String> strValue =  arrayOfWords.getStrArr();
+//        ArrayList<String> strValue =  arrayOfWords.getStrArr();
+
+        wordsArrayList.add(new UniqueWords(strHR));
         int hasCount = 0;
-        for (UniqueWords d : strValue) {
+        for ( UniqueWords d : wordsArrayList) {
             wordsHashMap.put(hasCount, d);
             hasCount++;
+        }
+        System.out.println("***");
+        for (Integer i : wordsHashMap.keySet()) {
+            System.out.println("Key: " + i + " value: " + wordsHashMap.get(i));
         }
 
     }
