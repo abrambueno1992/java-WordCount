@@ -40,6 +40,14 @@ public class UniqueWords {
         this.longString = longString;
     }
 
+    public ArrayList<String> getStrArr() {
+        return strArr;
+    }
+
+    public void setStrArr(ArrayList<String> strArr) {
+        this.strArr = strArr;
+    }
+
     @Override
     public String toString() {
         return "UniqueWords{" +

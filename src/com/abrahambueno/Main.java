@@ -1,6 +1,7 @@
 package com.abrahambueno;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
 
@@ -10,7 +11,13 @@ public class Main {
         // array list fixed datatype
         ArrayList<UniqueWords> wordsArrayList = new ArrayList<UniqueWords>();
         UniqueWords arrayOfWords = new UniqueWords(strHR);
-
+        HashMap<Integer, UniqueWords> wordsHashMap = new HashMap<Integer, UniqueWords>();
+        ArrayList<String> strValue =  arrayOfWords.getStrArr();
+        int hasCount = 0;
+        for (UniqueWords d : strValue) {
+            wordsHashMap.put(hasCount, d);
+            hasCount++;
+        }
 
     }
 }
