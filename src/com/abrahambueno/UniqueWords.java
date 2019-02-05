@@ -1,10 +1,11 @@
 package com.abrahambueno;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class UniqueWords {
     private String longString;
-    private String[] strArr;
+    private ArrayList strArr;
 
     public static void main(String[] args) {
 
@@ -17,12 +18,13 @@ public class UniqueWords {
                 temporary += str.charAt(i);
             } else {
                 if (temporary != "") {
-                    strArr.add(temporary);
+                    System.out.println("adding: " + temporary);
+//                    strArr.add(temporary);
                 }
                 temporary = "";
             }
         }
-        System.out.println("This is the new array, with words only: " + strArr);
+        System.out.println("This is the new array, with words only: " + temporary);
     }
 
     public UniqueWords(String longString) {
@@ -42,7 +44,7 @@ public class UniqueWords {
     public String toString() {
         return "UniqueWords{" +
                 "longString='" + longString + '\'' +
-                ", strArr=" + Arrays.toString(strArr) +
+                ", strArr=" + strArr +
                 '}';
     }
 }
