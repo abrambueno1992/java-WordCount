@@ -10,10 +10,10 @@ public class UniqueWords {
 
     }
 
-    public void parseString(String str) {
-        private String temporary = "";
+    public void parseToString(String str) {
+        String temporary = "";
         for (int i = 0; i <  str.length(); i++) {
-            if (str.charAt(i) != " " && str.charAt(i) != "." && str.charAt(i) != "," ) {
+            if (str.charAt(i) != ' ' && str.charAt(i) != '.' && str.charAt(i) != ',' ) {
                 temporary += str.charAt(i);
             } else {
                 if (temporary != "") {
@@ -27,7 +27,7 @@ public class UniqueWords {
 
     public UniqueWords(String longString) {
         this.longString = longString;
-        parseString(longString);
+        parseToString(longString);
     }
 
     public String getLongString() {
