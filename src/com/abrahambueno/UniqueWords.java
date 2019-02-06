@@ -4,41 +4,35 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class UniqueWords {
-//    private String longString;
-    ArrayList<String> strArr = new ArrayList<String>();
+    private String longString;
+    private ArrayList<String> strArr = new ArrayList<String>();
 //    ArrayList<Dogs> dogsArrayList
     public static void main(String[] args) {
 
     }
 
-    public void parseToString(String str) {
-        String temporary = "";
-        for (int i = 0; i <  str.length(); i++) {
-            if (str.charAt(i) != ' ' && str.charAt(i) != '.' && str.charAt(i) != ',' ) {
-                temporary += str.charAt(i);
-            } else {
-                if (temporary != "") {
-                    String[] newStr = new String[1];
-                    newStr[0] = temporary;
-                    System.out.println("adding: " + newStr[0].toString());
-                    strArr.add(newStr[0].toString().toLowerCase());
-                }
-                temporary = "";
-            }
-        }
-        System.out.println("This is the new array, with words only: " + strArr);
-    }
+
 
     public ArrayList<String> getStrArr() {
         return strArr;
     }
 
-    public void setStrArr(ArrayList<String> strArr) {
+    public void setStrArr(ArrayList<String> strArr, String longString) {
         this.strArr = strArr;
+        this.longString = longString;
     }
 
-    public UniqueWords(ArrayList<String> strArr) {
-        this.strArr = strArr;
+    public String getLongString() {
+        return longString;
+    }
+
+    public void setLongString(String longString) {
+        this.longString = longString;
+    }
+
+    public UniqueWords( String longString) {
+        this.longString = longString;
+//        this.strArr = strArr;
     }
 
     @Override
